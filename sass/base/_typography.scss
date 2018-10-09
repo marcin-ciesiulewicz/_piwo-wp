@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Amiri:400,400i,700i');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-grey-dark-1;
+}
+
+.heading-secondary {
+    font-family: $font-cinzel;
+    font-size: 6rem;   
+    
+    @include respond(lg) {
+        font-size: 5rem;
+    }
+    
+    @include respond(md) {
+        font-size: 4.7rem;
+    }
+
+    @include mq(425px) {
+        font-size: 3.7rem;
+    }
+    
+}
+.sub-heading {
+    font-family: $font-amiri;
+    font-size: 2rem;
+    
+    @include respond(lg) {
+        font-size: 1.8rem;
+    }
+}
+

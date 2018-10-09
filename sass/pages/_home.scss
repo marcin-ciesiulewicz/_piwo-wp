@@ -1,0 +1,254 @@
+main {
+    position: relative;
+    margin-bottom: 7rem;
+    z-index: 100;
+
+    &.main--home{
+        margin-bottom: 20rem;
+    }
+
+    @include respond(md) {
+        margin-bottom: 40rem;
+    }
+
+    @include respond(sm) {
+        margin-bottom: 30rem;
+    }
+
+    @include mq(425px) { margin-bottom: 35rem; }
+
+}
+
+.section-info {
+    background: $color-black-2;
+    position: relative;
+    height: 66rem;
+
+    &__img-right {
+        height: 58rem;
+        right: 0;
+        position: absolute;
+        transform: translateY(-50px);
+        
+        @include respond(md) {
+            transform: translateY(0);
+        }
+        
+        @include respond(sm) {
+            height: 48rem;
+        }
+
+        @include mq(425px) {
+            height: 30rem;
+        }
+
+    }
+
+    &__img-bottle {
+        height: 70rem;
+        position: absolute;
+        right: 45rem;
+        top: 60px;
+        z-index: 1;
+
+        @include respond(md) {
+            right: 17rem;
+            top: 20px;
+        }
+
+        @include mq(425px) {
+            right: 8rem;
+        }
+
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 10rem;
+
+        .heading-secondary {
+            color: $color-white;
+           
+        }
+        .sub-heading {            
+            color: $primary-gold;
+
+            @include respond(md) {
+                width: 60%;
+            }
+
+        }
+    }
+    
+    &__banner {
+        background: url(../img/banner_1.png) no-repeat center center;
+        padding: 4rem 0;
+        position: absolute;
+        top: 30rem;
+        width: 82%;
+        height: 358px;
+        
+        .heading-secondary {
+            color: $primary-gold;
+            margin-top: 4rem;    
+        }
+        .sub-heading { 
+            color: $primary-gold-2;
+            word-break: break-all;
+            width: 71%;
+
+            @include mq(1440px) {
+                width: 64%;
+            }
+
+            @include respond(lg) {
+                width: 62%
+            }
+
+            @include respond(md) {
+                width: 70%;
+            }
+
+        }
+
+        .btn--black {
+            margin-top: 2rem;
+
+            @include respond(sm) {
+                padding: 1rem 2rem .6rem;
+                font-size: 2.4rem;
+            }
+
+        }
+
+    }
+}
+
+.section-banner-1 {
+    background: url(../img/banner_2.png) no-repeat center top / cover;
+    height: 70rem;
+    position: relative;
+
+    @include respond(sm) {
+        height: 50rem;
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%,-30%);
+        
+        h2 {
+            font-size: 4.7rem;
+            font-family: $font-cinzel;
+            font-weight: 900;
+            color: $color-black;
+
+            @include mq(1440px) {
+                font-size: 4.2rem;
+            }
+
+            @include respond(md) {
+                font-size: 3.4rem;
+            }
+
+            @include mq(425px) {
+                font-size: 2.7rem;
+            }
+
+        }
+
+    }
+
+}
+
+.section-handcraft {
+    background: $color-black-3;
+    position: relative;
+    height: 55rem;
+
+    &__text-box {
+        position: absolute;
+        top: 3rem;
+
+        .heading-secondary {
+            color: $primary-gold;  
+            margin-bottom: 3rem;
+        }
+
+        .sub-heading {  
+            color: $primary-gold-2;
+            word-break: break-all;
+
+            &:last-child{
+                margin-top: 4rem;
+            }
+
+        }
+
+    }
+
+    &__img-right {
+        height: 70rem;
+        margin-top: -71px;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+
+        @include respond(md) {
+            height: 55rem;
+            margin-top: -2px;
+        }
+
+        @include respond(sm) {
+            height: 45rem;
+        }
+
+        @include mq(425px) {
+            height: 35rem;
+        }
+
+    }
+
+}
+
+.section-banner-2 {
+    position: relative;
+    background: url(../img/banner_xxl_2.png) no-repeat center center /cover;
+    height: 230rem;
+
+    @include respond(sm) {
+        height: 180rem;
+    }
+
+    &__text-box {
+        padding-top: 14rem;
+        text-align: center;
+
+        @include respond(sm) {
+            padding-top: 0;
+        }
+
+    }
+
+    .heading-secondary {
+        color: $primary-gold;
+        font-size: 7.2rem;
+
+        @include respond(md) {
+            font-size: 5.2rem;
+        }
+
+    }
+
+    .sub-heading { 
+        color: $primary-gold-2;
+        font-size: 2.4rem;
+    }
+
+    .btn--black {
+        margin-top: 4rem;
+    }
+
+}

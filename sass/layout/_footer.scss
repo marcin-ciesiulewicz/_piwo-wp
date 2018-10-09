@@ -1,0 +1,83 @@
+.footer {
+    background: $background-button-black;
+    padding: 4rem;
+    height: 20rem;
+    bottom: 0;
+    width: 100%;
+    color: $color-white;
+    font-size: initial;
+
+    &--home{
+        position: fixed;
+    }
+
+    @include respond(md) {
+        height: 40rem;
+    }
+
+    @include respond(sm) {
+        height: 30rem;
+    }
+
+    @include mq(425px) { height: 35rem; }
+    
+    &__heading {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+
+        @include respond(md) {
+            &:not(:last-child){
+                margin-bottom: 4rem;
+            }
+        }
+
+    }
+    
+    &__link {
+        position: relative;
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        transition: all .3s ease;
+        
+        &:not(:last-child) {
+            margin-right: 2.3rem;
+        }
+
+        &:link,
+        &:visited {
+            color: $color-white;
+        }
+
+        &:hover {
+            border: 1px solid $color-white;
+        }
+
+        i {
+            @include abs-center;            
+        }
+        
+        &--fb {
+            background: #2e3192;
+        }
+        
+        &--tt {
+            background: #00aeef;
+        }
+        
+        &--yt {
+            background: #ed3123;
+        }
+        
+        &--pin {
+            background: #c8232c;
+        }
+
+    }
+
+}

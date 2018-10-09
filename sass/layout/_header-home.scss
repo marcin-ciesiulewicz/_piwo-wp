@@ -1,0 +1,209 @@
+.header {
+    height: 100vh;
+    position: relative;
+    z-index: 100;
+
+    &__video{
+        &:before{
+            position: absolute;
+            content: '';
+            display: block;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: linear-gradient(to  bottom, rgba($color-black-3, .7) 45%, rgba($primary-gold-2, .3));
+        }
+    }
+
+    &__single{
+    background: url('../img/header_background.png') no-repeat center center;
+        height: 70vh;
+    }
+
+    @include respond(lg) {
+        height: 90vh;
+    }
+
+    @include respond(md) {
+        height: 80vh;
+    }
+
+    @include respond(sm) {
+        height: 70vh;
+    }
+
+    @include mq(425px) {
+        height: 50vh;
+    }
+
+    &__logo-box {
+        //text-align: center;
+        padding-top: 3.5rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__logo {
+        height: 12rem;
+    }
+
+    &__text-box {
+        @include abs-center;
+
+        .heading-primary {
+
+            text-align: center;
+            color: $color-white;
+    
+            span {
+                display: block;
+            }
+
+            &--main {
+                font-size: 6rem;
+                font-family: $font-cinzel;
+                font-weight: 900;
+                position: relative;
+
+                // @include respond(xl) {
+                //     font-size: 5rem;
+                // }
+
+                // @include respond(lg) {
+                //     font-size: 4rem;
+                // }
+                
+                // @include respond(md) {
+                //     font-size: 2.8rem;
+                // }
+
+                &::before,
+                &::after {
+                    position: absolute;
+                    display: block;
+                    content: '';
+                    width: 30%;
+                    height: 3px;
+                    top: 50%;
+                    background: $primary-gold;
+
+                    @include respond(md) {
+                        height: 1px;;
+                    }
+
+                }
+
+                &::before {
+                    left: 0;
+
+                    @include respond(md) {
+                        left: -10px;
+                    }
+
+                }
+
+                &::after {
+                    right: 0;
+                    
+                    @include respond(md) {
+                        right: -10px;
+                    }
+                }
+
+            }
+            
+            &--sub-1 {
+                font-size: 3.6rem;
+                font-family: $font-cinzel;
+                font-weight: 400;
+                letter-spacing: -1px;
+                margin-top: -25px;
+                
+                // @include respond(xxl) {
+                //     font-size: 3.3rem;
+                // }
+                
+                // @include respond(xl) {
+                //     font-size: 2.8rem;
+                // }
+                
+                // @include respond(lg) {
+                //     font-size: 2.4rem;
+                //     margin-top: -15px;
+                // }
+                
+                // @include respond(md) {
+                //     font-size: 1.6rem;
+                //     margin-top: -10px;
+                // }
+                
+                @include respond(md) {
+                    font-size: 3rem;
+                    margin-top: -10px;
+                }
+                
+                // @include respond(sm) {
+                //     font-size: 1.2rem;
+                //     margin-top: -5px;
+                // }
+                
+            }
+            
+            &--sub-2 {
+                font-size: 2.4rem;
+                font-family: $font-amiri;
+                color: $primary-gold;
+
+                @include respond(lg) {
+                    font-size: 1.7rem;
+                }
+                
+                @include respond(sm) {
+                    font-size: 1.2rem;
+                }
+
+            }
+
+        }
+
+    }
+
+    &__scroll-box {
+        position: absolute;
+        bottom: 3.7rem;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+
+
+        @include respond(lg) {
+            bottom: 1.7rem;
+        }
+
+    }
+
+    &__scroll-content {
+        color: $primary-gold;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+       
+        @include respond(sm) {
+            font-size: 1rem;
+        }
+
+        &--text {
+            display: block;
+        }
+    
+        &--icon {
+            display: block;
+            animation: upDown 3s ease infinite;
+        }
+
+    }
+
+
+}

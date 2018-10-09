@@ -1,0 +1,8 @@
+.u-ml-8 {
+    margin-left: 8rem;
+
+    @include mq(1440px) { margin-left: 5rem; }
+
+    @include mq(425px) { margin-left: 3rem; }
+
+}
